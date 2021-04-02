@@ -36,7 +36,9 @@
   cursor: pointer;
   color: rgba(255, 255, 255, 0.7);
 }
-.header__nav-item:hover .header__qr {
+
+.header__nav-item:hover .header__qr,
+.header__nav-item:hover .header__notify {
   display: block;
 }
 .header__nav-item--strong {
@@ -96,4 +98,101 @@
 }
 .header__qr-link {
   line-height: 1.8;
+}
+/* Header Notify */
+.header__notify {
+  position: absolute;
+  display: none;
+  top: 150%;
+  right: 0;
+  background-color: var(--white-color);
+  width: 400px;
+  border: 1px solid #d3d3d3;
+  cursor: default;
+  transform-origin: calc(100% - 20px) top;
+  animation: headerNotifyGrowth ease-in 0.2s;
+}
+.header__notify::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -10px;
+  left: 0;
+  height: 10px;
+  width: 100%;
+}
+@keyframes headerNotifyGrowth {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.header__notify-header {
+  color: #999;
+  margin-left: 12px;
+}
+.header__notify-header h3 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  user-select: none;
+}
+
+.header__notify-list {
+  padding-left: 0;
+  list-style: none;
+}
+
+.header__notify-item {
+  background-color: rgba(238, 75, 43, 0.09);
+}
+.header__notify-item--viewed {
+  background-color: var(--white-color);
+}
+.header__notify-item:hover,
+.header__notify-link:hover {
+  background-color: #f4f0f0;
+}
+
+.header__notify-link {
+  display: flex;
+  text-decoration: none;
+  padding: 12px;
+}
+.header__notify-img {
+  width: 48px;
+  object-fit: contain;
+}
+.header__notify-info {
+  margin-left: 6px;
+}
+
+.header__notify-name {
+  display: block;
+  color: var(--text-color);
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 6px;
+}
+
+.header__notify-description {
+  display: block;
+  color: #756f6e;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+.header__notify-footer {
+  display: flex;
+}
+.header__notify-footer-btn {
+  text-decoration: none;
+  color: var(--text-color);
+  padding: 8px 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 400;
 }
