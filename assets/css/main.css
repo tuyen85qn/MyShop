@@ -265,4 +265,49 @@
 }
 
 .auth__form-socials {
+  background-color: #999;
+  padding: 12px 32px;
+  display: flex;
+  justify-content: space-between;
+}
+.auth__form-socials-link {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  padding: 8px 0 8px 8px;
+  border-radius: 2px;
+  text-decoration: none;
+  color: var(--text-color);
+  background-color: var(--white-color);
+}
+.auth__form-socials-link i {
+  font-size: 1.6rem;
+}
+.auth__form-socials-facebook {
+  background-color: #2d83f3;
+  color: var(--white-color);
+}
+.auth__form-social-text {
+  padding: 0 18px;
+}
+.auth__form-help {
+  margin-top: 32px;
+  display: flex;
+  justify-content: flex-end;
+}
+.auth__form-help-link {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1.4rem;
+}
+.auth__form-help-forgot {
+  color: var(--primary-color);
+}
+.auth__form-hep--separate {
+  border: 1px solid #eaeaea;
+  height: 22px;
+  margin: -3px 16px 0;
+}
+.auth__form-social-login {
+  padding: 0 8px;
 }

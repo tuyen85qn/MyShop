@@ -134,8 +134,8 @@
        </div>
        <div class="modal__body">    
 
-            <!-- Login/register form -->
-             <div class="auth__form">
+            <!-- Register form -->
+             <div id="form__register" hidden="true" class="auth__form">
 
                 <div class="auth__form-container">
                     <div class="auth__form-header">
@@ -165,22 +165,72 @@
                         </p>
                     </div>
                     <div class="auth__form-controls">
-                        <button class="btn">TRỞ LẠI</button>
+                        <button class="btn mr-8">TRỞ LẠI</button>
                         <button class="btn btn--primary">ĐĂNG KÝ</button>
                     </div>
                 </div>
 
                 <div class="auth__form-socials">
-                    <a href="" class="btn--with-icon">
+                    <a href="" class="auth__form-socials-link auth__form-socials-facebook">
                         <i class="fab fa-facebook-square"></i>
-                        Kết nối với Facebook
+                        <span class="auth__form-social-text">
+                            Kết nối với Facebook
+                        </span>                             
                     </a>
-                    <a href="" class="btn--with-icon">
+                    <a href="" class="auth__form-socials-link">
                         <i class="fab fa-google"></i>
-                        Kết nối với Google
+                        <span class="auth__form-social-text">
+                            Kết nối với Google
+                        </span> 
                     </a>
                 </div>
-            </div>         
+            </div>       
+             <!-- Login form -->
+             <div id="form__login"  class="auth__form">
+
+                <div class="auth__form-container">
+                    <div class="auth__form-header">
+                        <h3 class="auth__form-heading"> Đăng nhập</h3>
+                        <span class="auth_form-switch-btn">Đăng ký</span>
+                    </div>
+                    
+                    <div class="auth__form-form">
+                        <div class="auth__form-group">
+                            <input type="text" class="auth__form-input" placeholder="Email của bạn">
+                            
+                        </div>
+                        <div class="auth__form-group">
+                            <input type="password" class="auth__form-input" placeholder="Mật khẩu của bạn">
+                            
+                        </div>                       
+                    </div>
+
+                    <div class="auth__form-help">
+                        <a href="" class="auth__form-help-link auth__form-help-forgot">Quên mật khẩu</a>
+                        <span class="auth__form-hep--separate"> </span>
+                        <a href="" class="auth__form-help-link ">Cần trợ giúp?</a>
+                    </div>
+                    <div class="auth__form-controls">
+                        <button class="btn mr-8">TRỞ LẠI</button>
+                        <button class="btn btn--primary">ĐĂNG NHẬP</button>
+                    </div>
+                </div>
+
+                <div class="auth__form-socials">
+                    <a href="" class="auth__form-socials-link auth__form-socials-facebook ">
+                        <i class="fab fa-facebook-square"></i>
+                        <span class="auth__form-social-text auth__form-social-login">
+                            Đăng nhập với Facebook
+                        </span>                             
+                    </a>
+                    <a href="" class="auth__form-socials-link ">
+                        <i class="fab fa-google"></i>
+                        <span class="auth__form-social-text auth__form-social-login">
+                            Đăng nhập với Google
+                        </span> 
+                    </a>
+                </div>
+            </div>     
        </div>
    </div>
 </body>
