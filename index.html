@@ -135,12 +135,12 @@
        <div class="modal__body">    
 
             <!-- Register form -->
-             <div id="form__register" hidden="true" class="auth__form">
+             <div id="form__register" class="auth__form">
 
                 <div class="auth__form-container">
                     <div class="auth__form-header">
                         <h3 class="auth__form-heading"> Đăng ký</h3>
-                        <span class="auth_form-switch-btn">Đăng nhập</span>
+                        <span class="auth_form-switch-btn" onclick="login_click()">Đăng nhập</span>
                     </div>
                     
                     <div class="auth__form-form">
@@ -186,12 +186,12 @@
                 </div>
             </div>       
              <!-- Login form -->
-             <div id="form__login"  class="auth__form">
+             <div id="form__login" class="auth__form">
 
                 <div class="auth__form-container">
                     <div class="auth__form-header">
                         <h3 class="auth__form-heading"> Đăng nhập</h3>
-                        <span class="auth_form-switch-btn">Đăng ký</span>
+                        <span class="auth_form-switch-btn" onclick="register_click()">Đăng ký</span>
                     </div>
                     
                     <div class="auth__form-form">
@@ -212,7 +212,7 @@
                     </div>
                     <div class="auth__form-controls">
                         <button class="btn mr-8">TRỞ LẠI</button>
-                        <button class="btn btn--primary">ĐĂNG NHẬP</button>
+                        <button class="btn btn--primary" >ĐĂNG NHẬP</button>
                     </div>
                 </div>
 
@@ -234,4 +234,18 @@
        </div>
    </div>
 </body>
+<script>
+    const register_click = ()=>{
+        const register = document.getElementById('form__register');
+        const login = document.getElementById('form__login');
+        register.style.display = 'block';
+        login.style.display = 'none';
+    };
+    const login_click = ()=>{
+        const register = document.getElementById('form__register');
+        const login = document.getElementById('form__login');
+        register.style.display = 'none';
+        login.style.display = 'block';
+    }
+</script>
 </html>
