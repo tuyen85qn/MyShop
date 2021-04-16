@@ -212,7 +212,7 @@
 .auth__form {
   width: 400px;
   background-color: var(--white-color);
-  border-radius: 3px;
+  border-radius: 2px;
 }
 
 .auth__form-container {
@@ -335,21 +335,62 @@
 .header__search {
   flex: 1;
   background-color: var(--white-color);
-  border-radius: 3px;
+  border-radius: 2px;
   display: flex;
   height: 40px;
 }
-.header__search-input {
+.header__search-wrap {
   position: relative;
+  flex: 1;
+}
+.header__search-input {
   border: none;
-  border-radius: 3px;
+  border-radius: 2px;
   outline: none;
   color: var(--text-color);
-  flex: 1;
   font-size: 1.4rem;
   margin-left: 16px;
+  height: 100%;
+  width: 100%;
+}
+.header__search-history {
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 0;
+  width: calc(100% - 16px);
+  background-color: var(--white-color);
+  border-radius: 2px;
+  box-shadow: 0 0 5px #d5d5d5;
+}
+.header__search-history-heading {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #d5d5d5;
+  margin: 8px 0 8px 12px;
 }
 
+.header__search-history-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.header__search-history-item {
+  padding: 4px 0 4px 12px;
+  height: 30px;
+}
+.header__search-history-link {
+  display: block;
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: var(--text-color);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.header__search-history-item:hover,
+.header__search-history-link:hover {
+  background-color: #d3d3d3;
+}
 .header__search-selection {
   position: relative;
   margin: 8px 0;
@@ -380,7 +421,7 @@
   width: calc(100% + 16px);
   list-style-type: none;
   padding-left: 0;
-  border-radius: 3px;
+  border-radius: 2px;
   background-color: var(--white-color);
   box-shadow: 0 2px #e1e1e1;
 }
@@ -397,18 +438,19 @@
 .header__search-item {
   display: flex;
   justify-content: space-between;
-  padding: 8px 8px 8px 16px;
+  padding: 10px 8px 10px 16px;
+  line-height: 2;
 }
 .header__search-item:hover {
   opacity: 0.9;
 }
 .header__search-item :first-child {
-  border-top-right-radius: 3px;
-  border-top-right-radius: 3px;
+  border-top-right-radius: 2px;
+  border-top-right-radius: 2px;
 }
 .header__search-item :last-child {
-  border-bottom-right-radius: 3px;
-  border-bottom-right-radius: 3px;
+  border-bottom-right-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
 .header__search-item span {
   font-size: 1.4rem;
@@ -426,7 +468,7 @@
   background-color: var(--primary-color);
   margin: 3px 3px 3px 0;
   width: 60px;
-  border-radius: 3px;
+  border-radius: 2px;
   display: flex;
 }
 .header__search-icon > svg {
