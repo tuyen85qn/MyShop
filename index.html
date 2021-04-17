@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.gstatic.com">    
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
     <title>Trang chủ</title>
 </head>
 <body>
@@ -138,17 +139,21 @@
                     </div>
                     <div class="header__search">
                         <div class="header__search-wrap">   
-                            <input id="key_word" type="text" class="header__search-input" placeholder="Nhập để tìm kiếm sản phẩm">
+                            <input id="search_keyword" type="text" class="header__search-input" placeholder="Nhập để tìm kiếm sản phẩm">
                             <div class="header__search-history">
                                 <h3 class="header__search-history-heading"> Lịch sử tìm kiếm</h3>
-                                <ul class="header__search-history-list">
-                                    <li class="header__search-history-item">
-                                        <a href="javascript:void(0)" class="header__search-history-link">
+                                <ul id="ul__history" class="header__search-history-list">
+                                    <li class="header__search-history-item" >
+                                        <a href="javascript:void(0)"
+                                         class="header__search-history-link"
+                                         >
                                             Now we can be sure that it won't break if the text gets longer. ... robust, we should float the author image and add overflow: hidden to the author name wrapper. ... We can use min-width with padding around the tag content.
                                         </a>
                                     </li>
                                     <li class="header__search-history-item">
-                                        <a href="javascript:void(0)" class="header__search-history-link">
+                                        <a href="javascript:void(0)" 
+                                        class="header__search-history-link"
+                                        >
                                             Kem chống nắng
                                         </a>
                                     </li>
@@ -298,28 +303,11 @@
                 </div>
             </div>     
        </div>
-   </div>
+   </div>  
+
+
+   <!-- Script -->
+   <script src="/assets/js/main.js"></script>
 </body>
-<script>
-    const GoBack = () =>{
-        let auth_form = document.getElementById('modal__auth');      
-        auth_form.style.display = 'none';
-    }
-    const Register = ()=>{
-        let auth_form = document.getElementById('modal__auth');
-        let register = document.getElementById('form__register');
-        let login = document.getElementById('form__login');
-        auth_form.style.display = 'flex';
-        register.style.display = 'block';
-        login.style.display = 'none';
-    };
-    const Login = ()=>{
-        let auth_form = document.getElementById('modal__auth');
-        let register = document.getElementById('form__register');
-        let login = document.getElementById('form__login');
-        auth_form.style.display = 'flex';
-        register.style.display = 'none';
-        login.style.display = 'block';
-    }
-</script>
+
 </html>
